@@ -163,9 +163,6 @@ echo "All rules for afwall were written to iptables_on.sh"
 echo
 echo "Now copy iptables_on.sh and iptables_off.sh to your internal storage."
 echo
-echo "Remember to make both scripts executable by using a file manager!"
-echo 
-echo
 echo "In AFWall press the three dots in the top right corner and select"
 echo "Set custom script. Now enter your path to the iptables_on.sh script"
 echo ". /[path to your storage]/iptables_on.sh" 
