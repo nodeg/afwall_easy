@@ -61,12 +61,16 @@ echo
 echo
 echo
 echo "Block Google? y/n"
+echo
+echo "Note: one exception will be added for Google IP 104.197.59.8"
+echo "This is neccessary to get updates from https://download.cyanogenmod.org"
 echo -n ":"
 while read Option
 do
 case $Option in
 y|Y)
 echo Adding Google ASN to list
+echo "$""IPTABLES -A "afwall" --destination "104.197.59.8" -j RETURN" >> iptables_on.sh
 curl --silent 'https://stat.ripe.net/data/announced-prefixes/data.json?preferred_version=1.1&resource=AS15169' | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/[0-9]{1,2}' | uniq > google.txt
 python2 \script/google.py >> iptables_on.sh
 break
@@ -114,45 +118,7 @@ break
 esac
 done
 clear
-echo "Block Apple? y/n"
-echo -n ":"
-while read Option
-do
-case $Option in
-y|Y)
-echo Adding Apple ASN to list
-curl --silent 'https://stat.ripe.net/data/announced-prefixes/data.json?preferred_version=1.1&resource=AS6185' | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/[0-9]{1,2}' | uniq > apple.txt
-python2 \script/apple.py >> iptables_on.sh
-break
-;;
-n|N)
-echo "Skipped Apple"
-break
-;;
-esac
-done
-clear
-echo "Block Microsoft? y/n"
-echo -n ":"
-while read Option
-do
-case $Option in
-y|Y)
-echo Adding Microsoft ASN to list
-curl --silent 'https://stat.ripe.net/data/announced-prefixes/data.json?preferred_version=1.1&resource=AS3598' | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/[0-9]{1,2}' | uniq > apple.txt
-python2 \script/microsoft.py >> iptables_on.sh
-break
-;;
-n|N)
-echo "Skipped Microsoft"
-break
-;;
-esac
-done
-clear
-rm microsoft.txt
 rm google.txt
-rm apple.txt
 rm samsung.txt
 rm facebook.txt
 cp \script/iptables_off.sh .
