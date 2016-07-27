@@ -5,7 +5,7 @@ echo "Block ASNs script and set DNS for Android AFWall"
 echo 
 echo
 echo
-echo Python2 is required!!!
+echo Python2 is required!!
 echo
 echo "=================================================="
 echo
