@@ -168,14 +168,14 @@ echo
 echo
 echo "In AFWall press the three dots in the top right corner and select"
 echo "Set custom script. Now enter your path to the iptables_on.sh script"
-echo "./[path to your storage]/iptables_on.sh" 
+echo ". /[path to your storage]/iptables_on.sh" 
 echo
 echo "Do the same for custom shutdown script using iptables_off.sh"
-echo "./[path to your storage]/iptables_off.sh"
+echo ". /[path to your storage]/iptables_off.sh"
 echo
-echo "For example: ./sdcard/iptables_on.sh"
+echo "For example: . /sdcard/iptables_on.sh"
 echo
-echo "IMPORTANT: Don't forget the "./" point/slash before path!!"
+echo "IMPORTANT: Don't forget the ". /" point-space-slash before path!!"
 echo "##########################################################"
 echo 
 echo
