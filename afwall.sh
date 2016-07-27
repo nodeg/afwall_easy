@@ -181,4 +181,6 @@ echo "Only IPv4 is working right now"
 echo
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
 echo "Have fun and enjoy a bit more privacy!"
+echo
+echo "https://github.com/mglinux/afwall_easy"
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
