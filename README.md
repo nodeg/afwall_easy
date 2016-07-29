@@ -3,7 +3,7 @@ Bash script for generating ASN Block lists and setting DNS Server for Android AF
 https://github.com/mglinux/afwall_easy
 
 
-Python2 and python2-ipaddress is required! 
+Python2 and python2-ipaddress are required! 
 
 
 *Extract afwall_easy.zip
