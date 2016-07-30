@@ -118,6 +118,25 @@ break
 esac
 done
 clear
+echo "Block Apple? y/n"
+echo -n ":"
+while read Option
+do
+case $Option in
+y|Y)
+echo Adding Apple ASN to list
+curl --silent 'https://stat.ripe.net/data/announced-prefixes/data.json?preferred_version=1.1&resource=AS714' | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/[0-9]{1,2}' | uniq > apple.txt
+python2 \script/apple.py >> iptables_on.sh
+break
+;;
+n|N)
+echo "Skipped Apple"
+break
+;;
+esac
+done
+clear
+rm apple.txt
 rm google.txt
 rm samsung.txt
 rm facebook.txt
