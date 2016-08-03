@@ -215,7 +215,9 @@ echo
 echo "Enter this:   . /system/afwscripts/iptables_off.sh"
 echo
 echo "IMPORTANT: Don't forget the ". /" point-space-slash!!"
-echo "##########################################################"
+echo
+echo 
+echo "Hint: See attached screenshot how it should look like!"
 echo
 echo
 echo "Afterwards press OK and wait until AFWall applied the rules!"
