@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 echo "=================================================="
-echo "Block ASNs script and set DNS for Android AFWall"
+echo -e "\033[3;34m BLOCK AS SCRIPT AND SET DNS FOR ANDROID AFWALL\033[0m"
 echo 
 echo
 echo
@@ -61,10 +61,10 @@ echo "Block ASNs:"
 echo
 echo
 echo
-echo "Block Google? y/n"
+echo    "Block Google? y/n"
 echo
-echo "Note: one exception will be added for Google IP 104.197.59.8"
-echo "This is neccessary to get updates from https://download.cyanogenmod.org"
+echo -e "\033[1;31m Note: One exception will be added for Google IP 104.197.59.8"
+echo -e "This is neccessary to get updates from https://download.cyanogenmod.org\033[0m"
 echo -n ":"
 while read Option
 do
@@ -84,7 +84,7 @@ break
 esac
 done
 clear
-echo "Block Facebook? y/n"
+echo    "Block Facebook? y/n"
 echo -n ":"
 while read Option
 do
@@ -103,7 +103,7 @@ break
 esac
 done
 clear
-echo "Block Samsung? y/n"
+echo    "Block Samsung? y/n"
 echo -n ":"
 while read Option
 do
@@ -122,7 +122,7 @@ break
 esac
 done
 clear
-echo "Block Apple? y/n"
+echo    "Block Apple? y/n"
 echo -n ":"
 while read Option
 do
@@ -141,14 +141,17 @@ break
 esac
 done
 clear
-echo "Block Amazon? y/n"
 echo
-echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo    "Block Amazon? y/n"
 echo
-echo "Note: The Amazon list is huge!"
-echo "If AFWall hangs or doesn't apply rules then restart script and skip Amazon"
+echo
+echo
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo
+echo -e "\033[1;31m Note: The Amazon list is huge!"
+echo -e "If AFWall hangs or doesn't apply rules then restart script and skip Amazon!\033[0m"
 echo 
-echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo
 echo -n ":"
 while read Option
@@ -168,7 +171,7 @@ break
 esac
 done
 clear
-echo "Block Microsoft? y/n"
+echo    "Block Microsoft? y/n"
 echo -n ":"
 while read Option
 do
@@ -193,6 +196,7 @@ rm apple.txt
 rm google.txt
 rm samsung.txt
 rm facebook.txt
+clear
 ls ./afwscripts >> list.txt
 awk '{print ". /system/afwscripts/" $0}' list.txt >> afwscripts.txt
 rm list.txt
@@ -219,15 +223,21 @@ echo
 echo 
 echo "Hint: See attached screenshot how it should look like!"
 echo
-echo
 echo "Afterwards press OK and wait until AFWall applied the rules!"
 echo 
-echo
 echo "Finally disable IPv6 Support in AFWall preferences->User Interface"
 echo "Only IPv4 is working right now"
+echo
+echo
+echo "--------------------------------------------------------------------------"
+echo "AFTER UPDATING YOUR SYSTEM CHECK IF /system/afwscripts IS STILL AVAILABLE."
+echo "ELSE YOU HAVE TO COPY OVER THE FOLDER AGAIN!"
+echo "--------------------------------------------------------------------------"
+echo
 echo
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
 echo "Have fun and enjoy a bit more privacy!"
 echo
 echo "https://github.com/mglinux/afwall_easy"
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+echo
