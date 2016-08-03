@@ -1,9 +1,14 @@
 # afwall_easy
-Bash script for generating ASN Block lists and setting DNS Server for Android AFWall
 https://github.com/mglinux/afwall_easy
 
 
-Python2 and python2-ipaddress are required! 
+Bash script for generating AS Block lists and setting DNS Server for Android AFWall.
+
+It generates AFWall scripts for blocking connections to google, facebook, microsoft and a few others.
+This gets achieved through setting the corressponding iptables rules.
+
+
+Note: Python2 and python2-ipaddress are required! 
 
 
 *Extract afwall_easy.zip
