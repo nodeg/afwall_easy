@@ -27,6 +27,7 @@ echo
 read -n 1 -s -p "Press any key to continue"
 clear
 mkdir ./afwscripts
+rm afwscripts.txt
 cp \script/default.list  ./afwscripts/aafwall.sh
 echo "Set DNS Server? Press key [1-3]"
 echo
@@ -63,7 +64,11 @@ echo
 echo
 echo    "Block Google? y/n"
 echo
-echo -e "\033[1;31m Note: One exception will be added for Google IP 104.197.59.8"
+echo
+echo -e "\033[1;31mNote: YouTube, Chromium extension search and the other google services aren't accessable anymore!"
+echo
+echo
+echo -e "One exception will be added for Google IP 104.197.59.8"
 echo -e "This is neccessary to get updates from https://download.cyanogenmod.org\033[0m"
 echo -n ":"
 while read Option
@@ -145,11 +150,13 @@ echo
 echo    "Block Amazon? y/n"
 echo
 echo
-echo
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo
-echo -e "\033[1;31m Note: The Amazon list is huge!"
-echo -e "If AFWall hangs or doesn't apply rules then restart script and skip Amazon!\033[0m"
+echo -e "\033[1;31mNote: The Amazon list is huge!"
+echo -e "If AFWall hangs or doesn't apply rules then restart script and skip Amazon!"
+echo -e ""
+echo -e "IMPORTANT: there are many amazon servers. Some services/pages won't function!" 
+echo -e "firefox addon searching, github downloads and several others\033[0m"
 echo 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo
@@ -230,9 +237,10 @@ echo "Only IPv4 is working right now"
 echo
 echo
 echo "--------------------------------------------------------------------------"
-echo "AFTER UPDATING YOUR SYSTEM CHECK IF /system/afwscripts IS STILL AVAILABLE."
-echo "ELSE YOU HAVE TO COPY OVER THE FOLDER AGAIN!"
+echo -e "\033[1;31mAFTER UPDATING YOUR SYSTEM CHECK IF /system/afwscripts IS STILL AVAILABLE."
+echo -e "ELSE YOU HAVE TO COPY OVER THE FOLDER TO /SYSTEM AGAIN!\033[0m"
 echo "--------------------------------------------------------------------------"
+echo
 echo
 echo
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"

@@ -8,7 +8,8 @@ It generates AFWall scripts for blocking connections to google, facebook, micros
 This gets achieved through setting the corressponding iptables rules.
 
 
-Note: Python2 and python2-ipaddress are required! 
+Note:   Python2 and python2-ipaddr are required! 
+        Be sure to install the right one for python2! There is another one (ipaddress).
 
 
 *Extract afwall_easy.zip
