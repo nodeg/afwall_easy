@@ -7,4 +7,4 @@ with open('samsung.txt') as fh:
       as_nets.append(net)
 
 for net in sorted(CollapseAddrList(as_nets)):
-   print "$IPTABLES -A 'afwall' -d %s -j REJECT" % (net)
+   print "$IPTABLES -A \"afwall\" -d %s -j REJECT" % (net)
