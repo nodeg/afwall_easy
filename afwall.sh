@@ -29,6 +29,7 @@ clear
 mkdir ./afwscripts
 rm afwscripts.txt
 cp \script/default.list  ./afwscripts/aafwall.sh
+clear
 echo "Set DNS Server? Press key [1-3]"
 echo
 echo
